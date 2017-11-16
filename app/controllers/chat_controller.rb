@@ -4,7 +4,7 @@ class ChatController < ApplicationController
       type: "buttons",
       buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
     }
-    render json: @msg
+    render json: @msg, status: :ok
   end
 
   def chat_control
@@ -18,7 +18,7 @@ class ChatController < ApplicationController
           buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
         }
       }
-      render json: @msg, status: ok
+      render json: @msg, status: :ok
     else
       @msg = {
         message:{
@@ -29,7 +29,7 @@ class ChatController < ApplicationController
           buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
         }
       }
-      render json: @msg, status: ok
+      render json: @msg, status: :ok
     end
   end
 end
