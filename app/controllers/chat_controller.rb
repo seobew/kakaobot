@@ -1,7 +1,7 @@
 class ChatController < ApplicationController
   def keyboard_init
     @msg = {
-      type: "button",
+      type: "buttons",
       buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
     }
     render json: @msg
@@ -14,7 +14,7 @@ class ChatController < ApplicationController
           text: "오늘의 주요기사 입니다."
         },
         keyboard:{
-          type: "button",
+          type: "buttons",
           buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
         }
       }
@@ -25,7 +25,7 @@ class ChatController < ApplicationController
           text: "들을만한 노래 입니다."
         },
         keyboard:{
-          type: "button",
+          type: "buttons",
           buttons: ["오늘의 주요기사 알려줘", "들을만한 노래 추천해줘"]
         }
       }
