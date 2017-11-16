@@ -8,6 +8,7 @@ class ChatController < ApplicationController
   end
 
   def chat_control
+    @response = params[:content]
     if @response == "오늘의 주요기사 알려줘"
       @msg = {
         message:{
